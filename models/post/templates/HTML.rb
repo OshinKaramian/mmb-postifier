@@ -9,7 +9,7 @@ module Post_HTML
 
     def build_entry_html(entry)
       s = "<b>#{entry.user_name}:</b><br />\n"
-      s += "<a href=\"\">#{entry.user_song.song_artist} - #{entry.user_song.song_title}</a><br />\n"
+      s += "<a href=\"#{Query::Grooveshark.new(entry.user_song).query}\">#{entry.user_song.song_artist} - #{entry.user_song.song_title}</a><br />\n"
       s += "<p><i>#{entry.entry_description.gsub(/\n/,"").gsub(/\t/, "").gsub(/\r/, "")}</i></p>\n"
       return s
     end

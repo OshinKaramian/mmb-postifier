@@ -1,0 +1,54 @@
+post = Post::Post.create "6/22/2012" do
+  description ""
+  entry {
+    name "Stevesey"
+    song {
+      artist "Passion Pit"
+      title "Take A Walk"
+    }
+    description "First single off Passion Pit’s new album. Potential summer anthem I’d say, looking forward to seeing them tomorrow at Governor’s Ball."
+  }
+  entry {
+    name "Gunner"
+    song {
+      artist "Duck Sauce"
+      title "Anyway"
+    }
+    description "Yes, Barbara Streisand is cheesy and overplayed but this track is plucked from an obscure 70s funk gem that I would have never heard without this song. Gonna be a dance party tomorrow on Randall’s Island."
+  }
+  entry {
+    name "Tom"
+    song {
+      artist "Anita Moore"
+      title "Compared To What"
+    }
+    description "Probably my favorite Lost & Found left coast leftover. Nice, bullseye."
+  }
+  entry {
+    name "noobchumpsky"
+    song {
+      artist "Third World"
+      title "96 Degrees In The Shade"
+    }
+    description "It is hoooooooooooooooooot out there."
+
+  }
+  entry {
+    name "whacker"
+    song {
+      artist "The Toxic Avenger"
+      title "N'Importe Comment"
+    }
+    description "I don’t parle francais, but this guy is a sick rapper."
+  }
+
+end
+
+post.extend Post_HTML
+puts post.print
+
+post.extend Post_Spotify
+puts post.print
+
+#post.extend Post_Grooveshark
+#puts post.print

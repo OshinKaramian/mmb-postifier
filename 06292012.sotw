@@ -36,3 +36,6 @@ puts post.print
 
 post.extend Post_Spotify
 puts post.print
+
+#post.extend Post_Grooveshark
+#puts post.print
